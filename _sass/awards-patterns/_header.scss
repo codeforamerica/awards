@@ -1,0 +1,21 @@
+.header {
+  padding: {
+    top: 1em;
+    // bottom: 1em;
+  }
+  @include media($tablet-up) {
+    padding-top: 2em;
+  }
+}
+
+.header__logo {
+  display: inline-block;
+  width: 200px;
+  @include media($tablet-up) {
+    width: 300px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

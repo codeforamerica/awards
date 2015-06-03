@@ -1,0 +1,60 @@
+// Typography
+$em-base:				    10px;
+$base-font-size:		rem(18px);
+$small-font-size:		rem(14px);
+$title-font-size:		rem(36px);
+$h1-font-size:			rem(36px);
+$h2-font-size:			rem(28px);
+$h3-font-size:			rem(24px);
+$h4-font-size:			rem(18px);
+$h5-font-size:			rem(16px);
+$h6-font-size:			rem(14px);
+$base-line-height:		1.7em;
+$heading-line-height:	1.3em;
+
+$font-sans:        'Gotham A', 'Gotham B', 'Helvetica', 'Arial', sans-serif;
+$font-serif:       'Sentinel SSm A', 'Sentinel SSm B', 'Georgia', 'Times New Roman', serif;
+$font-mono:				 'Source Code Pro', 'Courier New', 'Courier', monospace;
+
+// Color
+$color-grey-50:			#fafafa;
+$color-grey-100:		#f5f5f5;
+$color-grey-200:		#eeeeee;
+$color-grey-300:		#e0e0e0;
+$color-grey-400:		#bdbdbd;
+$color-grey-500:		#9e9e9e;
+$color-grey-600:		#757575;
+$color-grey-700:		#616161;
+$color-grey-800:		#424242;
+$color-grey-900:		#212121;
+
+$color-base-link:   #000000;
+
+// Code for America colors
+$color-red:         #cf1b41;
+$color-blue:        #399fd3;
+$color-gray:        #6D6E71;
+$color-light-blue:  #7ab5d6;
+$color-medium-blue: #4298bb;
+$color-dark-blue:   #004b6a;
+$color-light-gray:  #e5e5e5;
+$color-medium-gray: #999595;
+$color-dark-gray:   #444444;
+$color-medium-red:  #aa1c3a;
+$color-orange:      #e87d2b;
+$color-purple:      #69579C;
+$color-teal:        #00a175;
+$color-yellow:      #fedd44;
+
+// Mobile First Breakpoints
+$mobile-up:				  481px;
+$tablet-up:				  600px;
+$widescreen-up:			1201px;
+
+
+// Magic Numbers
+$site-max-width:		960px;
+$site-margins:			20px;
+$article-max-width: 600px;
+$border-radius:     4px;
+$box-shadow:			  0 0 2px rgba(#000, .3);

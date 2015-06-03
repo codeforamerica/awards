@@ -1,0 +1,35 @@
+.button {
+  // on mobile, button is 100% wide and text is centered
+  display: block;
+  width: 100%;
+  text-align: center;
+  @include media($tablet-up) {
+    // on tablet up, button is auto-width
+    display: inline-block;
+    width: auto;
+    text-align: left;
+  }
+
+  -webkit-appearance: none;
+  background-color: $color-red;
+  color: white;
+  border: 0;
+  border-radius: $border-radius;
+  font-size: $base-font-size;
+  font-weight: 700;
+  // remove underline a a.button
+  text-decoration: none;
+  margin: {
+    top: .5em;
+    bottom: .5em;
+    right: .5em;
+  }
+  outline: none;
+  padding: .5em .7em;
+  &:hover {
+    background-color: $color-medium-red;
+  }
+}
+a.button {
+  color: white;
+}

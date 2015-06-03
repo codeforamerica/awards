@@ -1,0 +1,55 @@
+---
+---
+
+// ---------
+// CORE STYLES
+// Vendor, core and elements are mostly shared with Chime Starter (with some tweaks)
+// ---------
+
+// Vendor -------------- //
+
+@import 'bourbon/bourbon';
+@import 'core/grid-settings';
+@import 'neat/neat';
+
+// Core -------------- //
+
+@import 'core/defaults';
+@import 'core/variables';
+@import 'core/utilities';
+@import 'core/normalize';
+@import 'core/base';
+@import 'core/grid';
+
+// Elements ---------- //
+// Styles basic html elements.
+
+@import 'elements/inline';
+@import 'elements/typography';
+@import 'elements/list';
+@import 'elements/table';
+@import 'elements/aside';
+@import 'elements/blockquote';
+@import 'elements/figure';
+@import 'elements/form';
+@import 'elements/button';
+
+// ---------
+// CONTENT PATTERNS
+// Content patterns are all specific to this project (excepting section-slab)
+// ---------
+
+// Site Patterns --------- //
+
+@import 'awards-patterns/section-slab';
+@import 'awards-patterns/header';
+
+// Templates --------- //
+// Styles specific page templates
+
+@import 'awards-templates/home';
+
+// Hacks --------- //
+// Temporary solutions until a better permanant solution is found
+
+@import 'shame';

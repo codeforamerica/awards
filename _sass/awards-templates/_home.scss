@@ -1,0 +1,24 @@
+// --------------
+// AWARDS HOME
+// Specific styles for awards
+// --------------
+
+// Typography -------------- //
+
+// Special serif for headlines
+.words-serif {
+  // Sentinel
+  font-family: $font-serif;
+  font-weight: 400; 
+  font-style: italic;
+  letter-spacing: -0.05em;
+}
+
+.words-title {
+  font-size: $title-font-size;
+  margin-top: 0.2em;
+  @include media($tablet-up) {
+    font-size: $title-font-size * 2;
+    line-height: 1.1em;
+  }
+}
