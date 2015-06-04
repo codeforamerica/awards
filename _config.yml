@@ -1,0 +1,10 @@
+collections:
+  judges:
+    output: true
+    permalink: /judges/:path/
+
+defaults:
+  - scope:
+      collection: judges
+    values:
+      layout: "judge"

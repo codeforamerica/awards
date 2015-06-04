@@ -1,38 +1,118 @@
 ---
 layout: default
 ---
+{% capture global_header %}
 <!-- global header -->
 <header class="header">
   <div class="grid-box">
     <div class="header__logo">
-      <img src="/images/logo-tech-awards.png" alt="">
+      <img src="{{ site.baseurl }}/images/logo-tech-awards-white.png" alt="">
     </div>
     <div class="header__nav">
       
     </div>
   </div>
 </header>
+{% endcapture %}
 
 <!-- Section: Intro -->
+<section class="section-slab section-hero">
+  
+  <video autoplay loop poster="{{ site.baseurl }}/images/video-bg.jpg" id="bgvid">
+    <!-- <source src="polina.webm" type="video/webm"> -->
+    <source src="{{ site.baseurl }}/images/city_compressed.mp4" type="video/mp4">
+  </video>
+
+  <div class="section-hero-content">
+    {{ global_header }}
+    <div class="grid-box">
+      <div class="width-whole">
+        <h1 class="words-serif words-title">Recognizing excellence in government technology</h1>
+      </div>
+      <div class="grid-item width-two-thirds">
+          <p>The Code for America Technology Awards recognize outstanding products developed for government use. Recipients are recognized on stage at the <a href="https://www.codeforamerica.org/summit/">Code for America Summit</a>.</p>
+          <p><strong>Applications for the awards open July 1, 2016.</strong></p>
+          <div class="button-group">
+            <a href="#" class="button">Get notified when applications open</a>
+            <a href="#" class="button">Sign up for the Summit</a>
+          </div>
+      </div>
+    </div>
+  </div><!-- end .section-hero-content -->
+</section>
+
+<!-- Section: How it Works -->
 <section class="section-slab">
   <div class="grid-box">
-    <div class="width-whole">
-      <h1 class="words-serif words-title">Recognizing excellence in government technology</h1>
+    <div class="grid-item width-whole">
+      <h1>How it works</h1>
     </div>
-    <div class="grid-item width-two-thirds">
-        <p>The Code for America Technology Awards recognize outstanding products developed for government use. Technology Awards recipients are guaranteed to provide best-in-class tools that solve essential public-sector problems and are recognized on stage at the <a href="https://www.codeforamerica.org/summit/">Code for America Summit</a>.</p>
-        <p><strong>Applications for the awards open July 1, 2016.</strong></p>
-        <div class="button-group">
-          <a href="#" class="button">Get notified when applications open</a>
-          <a href="#" class="button">Sign up for the Summit</a>
-        </div>
+
+    <div class="[ grid-item width-one-third ] [ step step-1 ]">
+      <div class="step-header">
+        <img src="{{ site.baseurl }}/images/icons/app-white.png" alt="">
+      </div>
+      <div class="step-copy">
+        <h4>You fill out the simple application</h4>
+        <p>Applications are free. Just spend a few minutes filling out details about your company and product.</p>
+        <p class="note">Applicants open July 1</p>
+      </div>
+    </div>
+    <div class="[ grid-item width-one-third ] [ step step-2 ]">
+      <div class="step-header">
+        <img src="{{ site.baseurl }}/images/icons/chat-white.png" alt="">
+      </div>
+      <div class="step-copy">
+        <h4>Our judges review the candidates</h4>
+        <p>Our panel of expert judges will review all entries and select the best of the best over the next 4 months.</p>
+        <p class="note"><a href="#judges">Meet the judges</a></p>
+      </div>
+    </div>
+    <div class="[ grid-item width-one-third ] [ step step-3 ]">
+      <div class="step-header">
+        <img src="{{ site.baseurl }}/images/icons/award-white.png" alt="">
+      </div>
+      <div class="step-copy">
+        <h4>The winners are announced on the mainstage</h4>
+        <p>We'll announce the winners to audience of influential government managers, technologists and entreprenuers.</p>
+        <p class="note"><a href="https://www.codeforamerica.org/summit/" target="_blank">Register for the Summit</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Section: Why You Should Apply -->
+<section class="section-slab">
+  <div class="grid-box">
+    <div class="grid-item width-whole">
+      <h1>Why you should apply</h1>
+    </div>
+    <div class="grid-item width-one-half">
+      <h4>Recognition</h4>
+      <p>Technology Award recipients recieve national recognition on The Code for America Summit mainstage, reaching a captive audience of government leaders, technologists and entreprenuers.</p>
+    </div>
+    <div class="grid-item width-one-half">
+      <h4>Endorsement</h4>
+      <p>Code for America is a nationally-recognized leader in government technology. Awardees are endorsed by Code for America, and can list their awards on website and marketing materials.</p>
     </div>
   </div>
 </section>
 
-<!-- content -->
-<section class="section-slab section-slab-blue">
+<!-- Section: Judges -->
+<section class="section-slab">
   <div class="grid-box">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, quia, voluptatibus sint assumenda dolore dolores, sapiente rem alias voluptatem et aliquam? Soluta sit quae quaerat iusto numquam ratione dolorem error, dicta, odit explicabo expedita aliquam, laudantium quis repudiandae dolorum doloribus odio doloremque tenetur in deserunt commodi officia quibusdam optio magnam! Similique eaque doloremque rem maiores veniam, qui, amet consectetur quam dolore reprehenderit sapiente dolorum quia voluptas. Magni, natus assumenda veritatis. Explicabo odio sapiente voluptate minus quis adipisci quisquam dolorum veritatis ullam accusamus amet dignissimos laborum, quos commodi libero tempora! Nobis nulla libero deleniti rerum alias, animi ut modi officiis.</p>
+    <div class="grid-item width-whole">
+      <h1>Meet the judges</h1>
+    </div>
+    {% for judge in site.judges %}
+    <div class="grid-item width-one-third judge {% cycle '','','end-row' %}">
+      <img class="judge-headshot" src="{{ site.baseurl }}/images/judges/{{ judge.full_name | downcase | replace:' ','-' }}.jpg" alt="{{ judge.name }}">
+      <h4>{{ judge.full_name }}</h4>
+      <p>{{ judge.title }}, {{ judge.organization }}</p>
+      <p>{{ judge.short_bio }}</p>
+      <p><a href="{{ site.baseurl }}{{ judge.url }}">Read more</a></p>
+    </div>
+    {% endfor %}
   </div>
 </section>

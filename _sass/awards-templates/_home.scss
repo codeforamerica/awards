@@ -9,16 +9,132 @@
 .words-serif {
   // Sentinel
   font-family: $font-serif;
-  font-weight: 400; 
+  font-weight: 700; 
   font-style: italic;
   letter-spacing: -0.05em;
 }
 
 .words-title {
   font-size: $title-font-size;
-  margin-top: 0.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
   @include media($tablet-up) {
-    font-size: $title-font-size * 2;
+    font-size: $title-font-size * 1.7;
     line-height: 1.1em;
   }
+}
+
+.note {
+  font-size: 0.8em;
+  &, & a { color: $color-grey-700; }
+}
+
+// Hero -------------- //
+// Header at the top of the page
+
+.section-hero {
+  // hide video on small
+  video { display: none; }
+
+  @include media($tablet-up) {
+    position: relative;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center center;  
+    padding: {
+      top: 3em;
+      bottom: 5em;
+    }
+    min-height: 95vh;
+    
+    // make the text white
+    &, & a { 
+      color: white;
+      font-weight: 700;
+    }
+    // button!
+    .button {
+      background-color: $color-yellow;
+      color: black;
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+
+    // video
+    video {
+      display: block;
+      background-image: url('/images/video-bg.jpg');
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+  }
+}
+
+.section-hero .header {
+  @include media($tablet-up) {
+    padding: {
+      top: 0;
+      bottom: 1em;
+    }
+  }
+}
+
+// Step -------------- //
+// Module for the steps
+
+.step {
+  border: 1px solid $color-grey-300;
+  margin-top: 1em;
+}
+
+.step-header {
+  background-color: $color-blue;
+  min-height: 10em;
+  position: relative;
+  img {
+    $icon-width: 100px;
+    width: $icon-width;
+    height: $icon-width;
+    display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    position: absolute;
+    margin-top: ($icon-width / 2) * -1;
+    margin-left: ($icon-width / 2) * -1;
+    left: 50%;
+    top: 50%;
+  }
+}
+
+.step-1 .step-header { background-color: $color-medium-blue; }
+.step-2 .step-header { background-color: $color-purple; }
+.step-3 .step-header { background-color: $color-teal; }
+
+.step-copy {
+  padding: 0.5em 1em;
+}
+
+
+// Judge -------------- //
+// Module for judges
+
+.judge {
+ @include media($tablet-up) {
+  margin-top: 1em;
+ }
+ img {
+  width: 100%;
+  height: auto;
+ }
+}
+
+.judge p {
+  font-size: 0.8em;
 }
