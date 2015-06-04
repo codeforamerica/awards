@@ -48,11 +48,14 @@
     }
     min-height: 95vh;
     
-    // make the text white
+    // make the text white and larger
     &, & a { 
       color: white;
       font-weight: 700;
+      text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     }
+    & a.button { text-shadow: none; }
+
     // button!
     .button {
       background-color: $color-yellow;
