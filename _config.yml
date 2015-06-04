@@ -1,4 +1,4 @@
-baseurl: "awards"
+baseurl: "/awards"
 collections:
   judges:
     output: true
