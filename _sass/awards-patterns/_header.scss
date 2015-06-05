@@ -4,14 +4,12 @@
   }
 }
 
+// Logo area
 .header-logo {
   display: inline-block;
-  width: 200px;
-  @include media($tablet-up) {
-    width: 300px;
-  }
   img {
-    width: 100%;
+    width: 200px;
+    @include media($tablet-up) { width: 300px; }
     height: auto;
   }
   .logo-large { display: none; }
@@ -19,4 +17,25 @@
     .logo-large { display: inherit; }
     .logo-small { display: none; }
   }
+}
+
+// Nav
+.header .nav-item {
+  a {
+    text-decoration: none;
+    border-bottom: 3px solid $color-red;
+    &:hover { border-bottom-color: black; }
+    @include media($tablet-up) {
+      text-transform: uppercase;
+      border-bottom: 3px solid $color-yellow;
+      &:hover { border-bottom-color: white; }
+    }
+  }
+
+  display: inline-block;
+  margin-top: 1.5em;
+}
+
+.nav-item + .nav-item {
+  margin-left: 0.5em;
 }

@@ -5,13 +5,17 @@ layout: default
 <!-- global header -->
 <header class="header">
   <div class="grid-box">
-    <div class="header-logo">
+    <div class="header-logo grid-item width-one-half">
       <img class="logo-large" src="{{ site.baseurl }}/images/logo-tech-awards-white.png" alt="">
       <img class="logo-small" src="{{ site.baseurl }}/images/logo-tech-awards-gray.png" alt="">
     </div>
-    <div class="header-nav">
-      
-    </div>
+    <nav>
+      <ul class="header-nav grid-item width-one-half">
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#judges">Judges</a></li>
+        <li class="nav-item"><a href="#partners">Partners</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 {% endcapture %}
@@ -40,7 +44,7 @@ layout: default
 </section>
 
 <!-- Section: How it Works -->
-<section class="section-slab">
+<section class="section-slab" id="about">
   <div class="grid-box">
     <div class="grid-item width-whole">
       <h1>How it works</h1>
@@ -98,23 +102,6 @@ layout: default
   </div>
 </section>
 
-<!-- Section: Judges -->
-<section class="section-slab">
-  <div class="grid-box">
-    <div class="grid-item width-whole">
-      <h1>Meet the judges</h1>
-    </div>
-    {% for judge in site.judges %}
-    <div class="grid-item width-one-third judge {% cycle '','','end-row' %}">
-      <img class="judge-headshot" src="{{ site.baseurl }}/images/judges/{{ judge.full_name | downcase | replace:' ','-' }}.jpg" alt="{{ judge.name }}">
-      <h4>{{ judge.full_name }}</h4>
-      <p>{{ judge.title }}, {{ judge.organization }}</p>
-      <p>{{ judge.short_bio }}</p>
-      <p><a href="{{ site.baseurl }}{{ judge.url }}">Read more</a></p>
-    </div>
-    {% endfor %}
-  </div>
-</section>
 
 <!-- Section: Selection Criteria -->
 <section class="section-slab">
@@ -132,7 +119,26 @@ layout: default
   </div>
 </section>
 
-<footer class="section-slab section-slab-grey section-footer">
+
+<!-- Section: Judges -->
+<section class="section-slab" id="judges">
+  <div class="grid-box">
+    <div class="grid-item width-whole">
+      <h1>Meet the judges</h1>
+    </div>
+    {% for judge in site.judges %}
+    <div class="grid-item width-one-third judge {% cycle '','','end-row' %}">
+      <img class="judge-headshot" src="{{ site.baseurl }}/images/judges/{{ judge.full_name | downcase | replace:' ','-' }}.jpg" alt="{{ judge.name }}">
+      <h4>{{ judge.full_name }}</h4>
+      <p>{{ judge.title }}, {{ judge.organization }}</p>
+      <p>{{ judge.short_bio }}</p>
+      <p><a href="{{ site.baseurl }}{{ judge.url }}">Read more</a></p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<footer class="section-slab section-slab-grey section-footer" id="partners">
   <div class="grid-box">
     <div class="grid-item grid-item-isolate width-whole">
       <p>The Technology Awards are presented in partnership with <a href="https://www.googleforentrepreneurs.com/" target="_blank">Google for Entrepreneurs</a>.</p>
