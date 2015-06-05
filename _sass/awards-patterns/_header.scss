@@ -1,14 +1,10 @@
 .header {
-  padding: {
-    top: 1em;
-    // bottom: 1em;
-  }
   @include media($tablet-up) {
     padding-top: 2em;
   }
 }
 
-.header__logo {
+.header-logo {
   display: inline-block;
   width: 200px;
   @include media($tablet-up) {
@@ -17,5 +13,10 @@
   img {
     width: 100%;
     height: auto;
+  }
+  .logo-large { display: none; }
+  @include media($tablet-up) {
+    .logo-large { display: inherit; }
+    .logo-small { display: none; }
   }
 }
