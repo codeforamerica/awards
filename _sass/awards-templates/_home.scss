@@ -3,6 +3,13 @@
 // Specific styles for awards
 // --------------
 
+// Images -------------- //
+// Image max-width should be 100%
+
+img {
+  max-width: 100%;
+}
+
 // Typography -------------- //
 
 // Special serif for headlines
@@ -25,6 +32,10 @@
 }
 
 .note {
+  margin: {
+    top: 0.5em;
+    bottom: 0.5em;
+  }
   font-size: 0.8em;
   &, & a { color: $color-grey-700; }
 }

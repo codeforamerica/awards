@@ -15,5 +15,11 @@
 
 .section-slab-blue {
 	background-color: $color-dark-blue;
-	color: white;
+	&, & a { color: white; }
+}
+
+.section-slab-grey {
+	margin-top: 2em;
+	background-color: $color-dark-gray;
+	&, & a { color: white; }
 }
