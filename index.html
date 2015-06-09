@@ -138,10 +138,11 @@ layout: default
     <div class="grid-item width-whole">
       <h1>Meet the judges</h1>
     </div>
-    {% for judge in site.judges %}
+    {% assign judges = (site.judges | sort: 'last_name') %}
+    {% for judge in judges %}
     <div class="grid-item width-one-third judge {% cycle '','','end-row' %}">
-      <img class="judge-headshot" src="{{ site.baseurl }}/images/judges/{{ judge.full_name | downcase | replace: '.','' | replace: ' ','-' }}.jpg" alt="{{ judge.name }}">
-      <h4>{{ judge.full_name }}</h4>
+      <img class="judge-headshot" src="{{ site.baseurl }}/images/judges/{{ judge.first_name | downcase | replace: '.','' | replace: ' ','-' }}-{{ judge.last_name | downcase | replace: '.','' | replace: ' ','-' }}.jpg" alt="{{ judge.name }}">
+      <h4>{{ judge.first_name }} {{ judge.last_name }}</h4>
       <p>{{ judge.title }}, {{ judge.organization }}</p>
       <p>{{ judge.short_bio }}</p>
       <p><a href="{{ site.baseurl }}{{ judge.url }}">Read more</a></p>
