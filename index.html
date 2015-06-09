@@ -120,16 +120,14 @@ layout: default
       <h1>Selection criteria</h1>
       <p>The Technology Awards will go to companies, governments, civic technologists, and other groups who are building software for the public sector in the United States. The software does not need to have been created in 2015. To be eligible for an award your group must have:</p>
       <article>
-      <ol>
-        <li>At least one US-based government agency must be using the technology</li>
-        <li>Technology that can be implemented — either through open source code or through a vendor</li>
-		<li>Someone from the team can accept award on-stage at the CfA Summit</li>
-      </ol>
+        <ol>
+          <li>At least one US-based government agency must be using the technology</li>
+          <li>Technology that can be implemented — either through open source code or through a vendor</li>
+      		<li>Someone from the team can accept award on-stage at the CfA Summit</li>
+        </ol>
       </article>
-    <p>Additionally applicants will be selected based on their alignment with the 
-	<a href = "http://codeforamerica.org/governments/principles/government-technology/">Government Technology Principles</a>, when applicable. 
-	</p>
-</div>
+      <p>Additionally applicants will be selected based on their alignment with the <a href = "http://codeforamerica.org/governments/principles/government-technology/">Government Technology Principles</a>, when applicable.</p>
+    </div>
   </div>
 </section>
 
@@ -142,7 +140,7 @@ layout: default
     </div>
     {% for judge in site.judges %}
     <div class="grid-item width-one-third judge {% cycle '','','end-row' %}">
-      <img class="judge-headshot" src="{{ site.baseurl }}/images/judges/{{ judge.full_name | downcase | replace:' ','-' }}.jpg" alt="{{ judge.name }}">
+      <img class="judge-headshot" src="{{ site.baseurl }}/images/judges/{{ judge.full_name | downcase | replace: '.','' | replace: ' ','-' }}.jpg" alt="{{ judge.name }}">
       <h4>{{ judge.full_name }}</h4>
       <p>{{ judge.title }}, {{ judge.organization }}</p>
       <p>{{ judge.short_bio }}</p>
