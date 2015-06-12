@@ -142,7 +142,13 @@ layout: default
     {% assign judges = (site.judges | sort: 'last_name') %}
     {% for judge in judges %}
     <div class="grid-item width-one-third judge {% cycle '','','end-row' %}">
-      <img class="judge-headshot" src="{{ site.baseurl }}/images/judges/{{ judge.first_name | downcase | replace: '.','' | replace: ' ','-' }}-{{ judge.last_name | downcase | replace: '.','' | replace: ' ','-' }}.jpg" alt="{{ judge.name }}">
+      <img class="judge-headshot" src="
+      {% if judge.placeholder_picture %}
+      {{ site.baseurl }}/images/judges/placeholder.jpg
+      {% else %}
+      {{ site.baseurl }}/images/judges/{{ judge.first_name | downcase | replace: '.','' | replace: ' ','-' }}-{{ judge.last_name | downcase | replace: '.','' | replace: ' ','-' }}.jpg
+      {% endif %}
+      " alt="{{ judge.name }}">
       <h4>{{ judge.first_name }} {{ judge.last_name }}</h4>
       <p>{{ judge.title }}, {{ judge.organization }}</p>
       <p>{{ judge.short_bio }}</p>
