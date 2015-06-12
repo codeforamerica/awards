@@ -37,5 +37,8 @@
 		.end-row {
 			@include omega();
 		}
+		.end-row + .grid-item { 
+			clear: left; 
+		}
 	}
 }
