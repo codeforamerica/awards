@@ -1,0 +1,21 @@
+{% include header.html %}
+
+<section class="section-slab">
+  <div class="grid-box">
+    <div class="width-one-whole grid-item">
+      <nav class="nav-breadcrumbs">
+        <span class="nav-breadcrumbs-item"><a href="/#judges">Technology Awards Judges</a></span>
+        <span class="nav-breadcrumbs-item">{{ page.first_name }} {{ page.last_name }}</span>
+      </nav>
+    </div>
+    <div class="grid-item width-one-half">
+      <img class="judge-headshot" src="{{ site.baseurl }}/images/judges/{{ page.first_name | downcase | replace: '.','' | replace: ' ','-' }}-{{ page.last_name | downcase | replace: '.','' | replace: ' ','-' }}.jpg" alt="{{ page.first_name }} {{ page.last_name }}">
+    </div>
+    <div class="grid-item width-one-half">
+      <h1>{{ page.first_name }} {{ page.last_name }}</h1>
+      <p class="words-quiet">{{ page.title }}, {{ page.organization }}</p>
+      <p class="words-quiet">Twitter: <a href="http://twitter.com/{{ page.twitter }}" target="_blank">{{ page.twitter }}</a></p>
+      <p>{{ page.long_bio }}</p>
+    </div>
+  </div>
+</section>

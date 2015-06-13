@@ -31,6 +31,17 @@ img {
   }
 }
 
+.words-quiet {
+  color: $color-grey-700;
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p.words-quiet + p.words-quiet {
+  margin-top: 0;
+}
+
 .note {
   margin: {
     top: 0.5em;
@@ -139,7 +150,7 @@ img {
 // Judge -------------- //
 // Module for judges
 
-.judge {
+.judge-box {
  @include media($tablet-up) {
   margin-top: 1em;
  }
@@ -149,6 +160,6 @@ img {
  }
 }
 
-.judge p {
+.judge-box p {
   font-size: 0.8em;
 }

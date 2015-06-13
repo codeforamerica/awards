@@ -1,25 +1,6 @@
 ---
 layout: default
 ---
-{% capture global_header %}
-<!-- global header -->
-<header class="header">
-  <div class="grid-box">
-    <div class="header-logo grid-item width-one-half">
-      <img class="logo-large" src="{{ site.baseurl }}/images/logo-tech-awards-white.png" alt="">
-      <img class="logo-small" src="{{ site.baseurl }}/images/logo-tech-awards-gray.png" alt="">
-    </div>
-    <nav>
-      <ul class="header-nav grid-item width-one-half">
-        <li class="nav-item"><a href="#about">About</a></li>
-        <li class="nav-item"><a href="#judges">Judges</a></li>
-        <li class="nav-item"><a href="#partners">Partners</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-{% endcapture %}
-
 <!-- Section: Intro -->
 <section class="section-slab section-hero">  
   <video autoplay loop poster="{{ site.baseurl }}/images/video-bg.jpg" id="bgvid">
@@ -27,7 +8,7 @@ layout: default
     <source src="{{ site.baseurl }}/images/city_blurry.mp4" type="video/mp4">
   </video>
 
-  {{ global_header }}
+  {% include header.html reverse="true" %}
   <div class="grid-box">
     <div class="width-whole">
       <h1 class="words-serif words-title">Recognizing excellence in government technology</h1>
@@ -142,8 +123,8 @@ layout: default
     </div>
     {% assign judges = (site.judges | sort: 'last_name') %}
     {% for judge in judges %}
-    <div class="grid-item width-one-third judge {% cycle '','','end-row' %}">
-      <img class="judge-headshot" src="
+    <div class="grid-item width-one-third judge-box {% cycle '','','end-row' %}">
+      <img class="judge-box-headshot" src="
       {% if judge.placeholder_picture %}
       {{ site.baseurl }}/images/judges/placeholder.jpg
       {% else %}
@@ -168,19 +149,3 @@ layout: default
 		</div>
 	</div>
 </section>
-
-<footer class="section-slab section-slab-grey section-footer" id="partners">
-  <div class="grid-box">
-    <div class="grid-item grid-item-isolate width-whole">
-      <p>The Technology Awards are presented in partnership with <a href="https://www.googleforentrepreneurs.com/" target="_blank">Google for Entrepreneurs</a>.</p>
-    </div>
-    <div class="grid-item width-one-third">
-      <img src="{{ site.baseurl }}/images/logo-google.png" alt="">
-    </div>
-  </div>
-  <div class="grid-box">
-    <div class="grid-item grid-item-isolate width-whole">
-      <p>Technology Awards name and logo copyright &copy; 2015 <a href="https://www.codeforamerica.org/">Code for America</a>. Questions? Reach out to us at <a href="mailto:awards@codeforamerica.org">awards@codeforamerica.org</a>.</p>
-    </div>
-  </div>
-</footer>

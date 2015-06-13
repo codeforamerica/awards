@@ -42,12 +42,14 @@
 // Site Patterns --------- //
 
 @import 'awards-patterns/section-slab';
+@import 'awards-patterns/nav-breadcrumbs';
 @import 'awards-patterns/header';
 
 // Templates --------- //
 // Styles specific page templates
 
 @import 'awards-templates/home';
+@import 'awards-templates/judge';
 
 // Hacks --------- //
 // Temporary solutions until a better permanant solution is found
