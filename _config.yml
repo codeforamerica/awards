@@ -6,6 +6,8 @@ collections:
 
 defaults:
   - scope:
-      collection: judges
+      type: "judges"
     values:
-      layout: "judge"
+      layout: "default"
+      type: "judge"
+      foo: "bar"

@@ -16,7 +16,16 @@
   </head>
   <body>
     <div class="page-content">
-      {{ content }}
+      {% if page.type == "judge" %}
+        <div class="page-judge">
+          {% include judge.html %}
+        </div>
+      {% else %}
+        <div class="page-home">
+          {{ content }}
+        </div>
+      {% endif %}
+      {% include footer.html %}
     </div>
   </body>
   <!-- Google analytics tracking code -->

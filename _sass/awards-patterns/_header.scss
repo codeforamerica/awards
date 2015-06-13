@@ -27,13 +27,20 @@
     &:hover { border-bottom-color: black; }
     @include media($tablet-up) {
       text-transform: uppercase;
-      border-bottom: 3px solid $color-yellow;
-      &:hover { border-bottom-color: white; }
     }
   }
 
   display: inline-block;
   margin-top: 1.5em;
+}
+
+.header.header-reverse .nav-item {
+  a {
+    @include media($tablet-up) {
+      border-bottom: 3px solid $color-yellow;
+      &:hover { border-bottom-color: white; }
+    }
+  }
 }
 
 .nav-item + .nav-item {

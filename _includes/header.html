@@ -1,0 +1,23 @@
+<header class="header {% if include.reverse %}header-reverse{% endif %}">
+  <div class="grid-box">
+    <div class="header-logo grid-item width-one-half">
+      <a href="/">
+        {% if include.reverse %}
+          <img class="logo-large" src="{{ site.baseurl }}/images/logo-tech-awards-white.png" alt="">
+          <img class="logo-small" src="{{ site.baseurl }}/images/logo-tech-awards-gray.png" alt="">
+        {% else %}
+          <img class="logo-large" src="{{ site.baseurl }}/images/logo-tech-awards-gray.png" alt="">
+          <img class="logo-small" src="{{ site.baseurl }}/images/logo-tech-awards-gray.png" alt="">
+        {% endif %}
+      </a>
+    </div>
+    <nav>
+      <ul class="header-nav grid-item width-one-half">
+      <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/#about">About</a></li>
+        <li class="nav-item"><a href="/#judges">Judges</a></li>
+        <li class="nav-item"><a href="/#partners">Partners</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
