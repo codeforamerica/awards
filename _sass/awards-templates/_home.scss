@@ -82,10 +82,19 @@ p.words-quiet + p.words-quiet {
     .button {
       background-color: $color-yellow;
       color: black;
+      border: 2px solid $color-yellow;
       &:hover {
         background-color: white;
+        border-color: white;
         color: black;
       }
+    }
+
+    // button white
+    .button-white {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
     }
 
     // video
