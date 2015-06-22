@@ -13,7 +13,9 @@
     </div>
     <nav>
       <ul class="header-nav grid-item width-one-half">
-      <li class="nav-item"><a href="/">Home</a></li>
+        {% unless page.url == "/index.html" %}
+        <li class="nav-item"><a href="/">Home</a></li>
+        {% endunless %}
         <li class="nav-item"><a href="/#about">About</a></li>
         <li class="nav-item"><a href="/#judges">Judges</a></li>
         <li class="nav-item"><a href="/#partners">Partners</a></li>
