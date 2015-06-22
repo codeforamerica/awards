@@ -10,6 +10,11 @@ img {
   max-width: 100%;
 }
 
+.image-fill {
+  width: 100%;
+  height: auto;
+}
+
 // Typography -------------- //
 
 h1 {
@@ -191,7 +196,6 @@ p.words-quiet + p.words-quiet {
     }
   }
 }
-
 
 // Judge -------------- //
 // Module for judges

@@ -13,6 +13,10 @@
 	padding: 2em $site-margins;
 }
 
+.section-slab-color {
+	margin-top: 1em;
+}
+
 .section-slab-blue {
 	background-color: $color-dark-blue;
 	&, & a { color: white; }
