@@ -2,6 +2,11 @@
   @include media($tablet-up) {
     padding-top: 2em;
   }
+  padding-top: 2em;
+}
+
+.header.header-reverse {
+  padding-top: 0;
 }
 
 // Logo area
@@ -29,9 +34,8 @@
       text-transform: uppercase;
     }
   }
-
+  margin-top: 1em;
   display: inline-block;
-  margin-top: 1.5em;
 }
 
 .header.header-reverse .nav-item {
@@ -43,6 +47,9 @@
   }
 }
 
-.nav-item + .nav-item {
-  margin-left: 0.5em;
+.nav-item {
+  margin-right: 0.5em;
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
