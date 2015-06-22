@@ -16,6 +16,9 @@
   </head>
   <body>
     <div class="page-content">
+      {% if page.header == true %}
+        {% include header.html %}
+      {% endif %}
       {% if page.type == "judge" %}
         <div class="page-judge">
           {% include judge.html %}
