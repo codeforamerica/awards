@@ -1,0 +1,44 @@
+{% capture social_description %}
+The Code for America Technology Awards recognize outstanding products and implementations of government technology.
+{% endcapture %}
+
+{% capture social_url %}
+{{ site.production_url }}{{ page.url }}
+{% endcapture %}
+
+{% capture social_image %}
+{{ site.production_url }}/images/summit-2014.jpg
+{% endcapture %}
+
+{% capture social_tile %}
+Code for America Technology Awards
+{% endcapture %}
+
+<!-- SEO -->
+<meta name="author" content="Code for America">
+<meta name="description" content="{{ social_description }}">
+<link rel="canonical" href="{{ social_url }}">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@codeforamerica">
+<meta name="twitter:creator" content="Code for America">
+<meta name="twitter:title" content="{{ social_title }}">
+<meta name="twitter:description" content="{{ social_description }}">
+<meta name="twitter:image:src" content="{{ social_image }}">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="og:url" content="{{ social_url }}">
+<meta property="og:this.type" content="article">
+<meta property="og:title" content="Apply for the Code for America Technology Awards">
+<meta property="og:image" content="{{ social_image }}">
+<meta property="og:description" content="{{ social_description }}">
+<meta property="og:site_name" content="{{ social_title }}">
+<meta property="article:publisher" content="https://www.facebook.com/codeforamerica">
+
+<!-- Social: Google+ / Schema.org  -->
+<link rel="author" href="https://plus.google.com/+codeforamerica/posts"/>
+<link rel="publisher" href="https://plus.google.com/+codeforamerica/about"/>
+<meta itemprop="name" content="{{ social_name }}">
+<meta itemprop="description" content="{{ social_description }}">
+<meta itemprop="image" content="{{ social_image }}">

@@ -1,4 +1,5 @@
 baseurl: ""
+production_url: "http://awards.codeforamerica.org"
 collections:
   judges:
     output: true
