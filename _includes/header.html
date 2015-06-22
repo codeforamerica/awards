@@ -14,12 +14,12 @@
     <nav>
       <ul class="header-nav grid-item width-one-half">
         {% unless page.url == "/index.html" %}
-        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a class="{% if page.url == '/index.html' %} js-smooth-scroll {% endif %}" href="/">Home</a></li>
         {% endunless %}
-        <li class="nav-item"><a href="/#about">About</a></li>
-        <li class="nav-item"><a href="/#partners">Selection</a></li>
-        <li class="nav-item"><a href="/#judges">Judges</a></li>
-        <li class="nav-item"><a href="/#partners">Partners</a></li>
+        <li class="nav-item"><a class="{% if page.url == '/index.html' %} js-smooth-scroll {% endif %}" href="/#about">About</a></li>
+        <li class="nav-item"><a class="{% if page.url == '/index.html' %} js-smooth-scroll {% endif %}" href="/#partners">Selection</a></li>
+        <li class="nav-item"><a class="{% if page.url == '/index.html' %} js-smooth-scroll {% endif %}" href="/#judges">Judges</a></li>
+        <li class="nav-item"><a class="{% if page.url == '/index.html' %} js-smooth-scroll {% endif %}" href="/#partners">Partners</a></li>
       </ul>
     </nav>
   </div>
