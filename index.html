@@ -17,12 +17,12 @@ footer_partner: false
     </div>
     <div class="grid-item width-two-thirds">
         <p>
-          The Code for America Technology Awards recognize outstanding products and implementations of government technology. Winners will be announced on stage at the <a href="https://www.codeforamerica.org/summit/">Code for America Summit</a>, September 30 &ndash; October 2 in Oakland, CA. 
+          The Code for America Technology Awards recognize outstanding products and implementations of government technology. Winners will be announced on stage at the <a href="https://www.codeforamerica.org/summit/" ga('send', 'event', 'Homepage: Summit button click', 'Summit button in hero', 1);>Code for America Summit</a>, September 30 &ndash; October 2 in Oakland, CA. 
         </p>
         <p><strong>Applications are open from June 23 through July 13, 2015.</strong></p>
         <div class="button-group">
-          <a href="{{ site.baseurl }}/signup" class="button button-white" onclick="ga('send', 'event', 'Homepage', 'Apply button click', 'Apply button in header');">Sign up for updates</a>
-          <a href="https://codeforamerica.slideroom.com/#/permalink/program/25604/jRmWKgzhzX" target="_blank" class="button" onclick="ga('send', 'event', 'Homepage', 'Interest signup button click', 'Interest form in header');">Apply now</a>
+          <a href="{{ site.baseurl }}/signup" class="button button-white" onclick="ga('send', 'event', 'Homepage: Interest signup button click', 'Interest form in hero', 1);">Sign up for updates</a>
+          <a href="https://codeforamerica.slideroom.com/#/permalink/program/25604/jRmWKgzhzX" target="_blank" class="button" onclick="ga('send', 'event', 'Homepage: Apply button click', 'Apply button in hero', 1);">Apply now</a>
         </div>
     </div>
   </div>
@@ -43,7 +43,7 @@ footer_partner: false
         <h4>You fill out the simple application</h4>
         <p>It's free to apply. Just answer some questions about your technology.</p>
         <p class="note">Applications open June 23-July 13</p>
-        <p class="note"><a href="https://codeforamerica.slideroom.com/#/permalink/program/25604/jRmWKgzhzX" target="_blank" onclick="ga('send', 'event', 'Homepage', 'Apply button click', 'Apply button in How It Works section');">Apply now</a></p>
+        <p class="note"><a href="https://codeforamerica.slideroom.com/#/permalink/program/25604/jRmWKgzhzX" target="_blank" onclick="ga('send', 'event', 'Homepage: Apply button click', 'Apply button in How It Works section', 1);">Apply now</a></p>
 
       </div>
     </div>
@@ -65,7 +65,7 @@ footer_partner: false
       <div class="step-copy">
         <h4>The winners are announced on the main stage</h4>
         <p>We'll announce the winners to an audience of influential government managers, technologists and entrepreneurs.</p>
-        <p class="note"><a href="https://www.codeforamerica.org/summit/" target="_blank" onclick="ga('send', 'event', 'Homepage button click', 'Summit button: How It Works section', 1);">Register for the Summit</a></p>
+        <p class="note"><a href="https://www.codeforamerica.org/summit/" target="_blank" onclick="ga('send', 'event', 'Homepage: Summit button click', 'Summit button in How It Works section', 1);">Register for the Summit</a></p>
       </div>
     </div>
   </div>
@@ -105,7 +105,7 @@ footer_partner: false
 	<div class="grid-box">
 		<div class="grid-item width-one-whole grid-item-isolate words-center">
 			<h1>Ready to start your application?</h1>
-      <a href="https://codeforamerica.slideroom.com/#/permalink/program/25604/jRmWKgzhzX" target="_blank" class="button" onclick="ga('send', 'event', 'Homepage', 'Apply button click', 'Apply reminder in middle of page');">Apply now</a>
+      <a href="https://codeforamerica.slideroom.com/#/permalink/program/25604/jRmWKgzhzX" target="_blank" class="button" onclick="ga('send', 'event', 'Homepage: Apply button click', 'Apply reminder in middle of page');">Apply now</a>
     
 		</div>
 	</div>
@@ -114,9 +114,9 @@ footer_partner: false
       <h3>Get your questions answered</h3>
       <p>RSVP for one of our online office-hour sessions and talk with Code for America staff.</p>
       <ul>
-        <li><a href="https://www.eventbrite.com/e/code-for-america-technology-awards-office-hours-626-tickets-17475306111" target="_blank" onclick="ga('send', 'event', 'Homepage', 'Office hours button click', 'June 26 office hours');">Friday, June 26 - 10AM to 11AM</a></li>
-        <li><a href="https://www.eventbrite.com/e/code-for-america-technology-awards-office-hours-71-tickets-17402564539" target="_blank" onclick="ga('send', 'event', 'Homepage', 'Office hours button click', 'July 1 office hours');">Wednesday, July 1 - 10AM to 11:30AM</a></li>
-        <li><a href="https://www.eventbrite.com/e/code-for-america-technology-awards-office-hours-710-tickets-17476235892" target="_blank" onclick="ga('send', 'event', 'Homepage', 'Office hours button click', 'July 10 office hours');">Friday, July 10 - 10AM to 11:30AM</a></li>
+        <li><a href="https://www.eventbrite.com/e/code-for-america-technology-awards-office-hours-626-tickets-17475306111" target="_blank" onclick="ga('send', 'event', 'Homepage: Office hours button click', 'June 26 office hours');">Friday, June 26 - 10AM to 11AM</a></li>
+        <li><a href="https://www.eventbrite.com/e/code-for-america-technology-awards-office-hours-71-tickets-17402564539" target="_blank" onclick="ga('send', 'event', 'Homepage: Office hours button click', 'July 1 office hours');">Wednesday, July 1 - 10AM to 11:30AM</a></li>
+        <li><a href="https://www.eventbrite.com/e/code-for-america-technology-awards-office-hours-710-tickets-17476235892" target="_blank" onclick="ga('send', 'event', 'Homepage: Office hours button click', 'July 10 office hours');">Friday, July 10 - 10AM to 11:30AM</a></li>
       </ul>
     </div>
   </div>
@@ -154,7 +154,7 @@ footer_partner: false
     {% assign judges = (site.judges | sort: 'last_name') %}
     {% for judge in judges %}
     <div class="grid-item width-one-third judge-box {% cycle '','','end-row' %}">
-      <a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage', 'Judge picture click', '{{ judge.first_name }} {{ judge.last_name }}');">
+      <a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Image click: {{ judge.first_name }} {{ judge.last_name }}', 1);">
         <img class="judge-box-headshot" src="
         {% if judge.placeholder_picture %}
         {{ site.baseurl }}/images/judges/placeholder.jpg
@@ -163,10 +163,10 @@ footer_partner: false
         {% endif %}
         " alt="{{ judge.name }}">
       </a>
-      <h4><a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage', 'Judge name click', '{{ judge.first_name }} {{ judge.last_name }}');">{{ judge.first_name }} {{ judge.last_name }}</a></h4>
+      <h4><a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Name click: {{ judge.first_name }} {{ judge.last_name }}', 1);">{{ judge.first_name }} {{ judge.last_name }}</a></h4>
       <p>{{ judge.title }}, {{ judge.organization }}</p>
       <p>{{ judge.short_bio }}</p>
-      <p><a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage', 'Judge read more click', '{{ judge.first_name }} {{ judge.last_name }}');">Read more</a></p>
+      <p><a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Read more click: {{ judge.first_name }} {{ judge.last_name }}', 1);">Read more</a></p>
     </div>
     {% endfor %}
   </div>
@@ -179,7 +179,7 @@ footer_partner: false
       <h1>Partners</h1>
     </div>
     <div class="grid-item grid-item-isolate width-whole">
-      <p>The Technology Awards are presented in partnership with <a href="https://www.googleforentrepreneurs.com/" target="_blank" onclick="ga('send', 'event', 'Homepage', 'Google for Entreprenuers button click', 'Button in partners section');">Google for Entrepreneurs</a>.</p>
+      <p>The Technology Awards are presented in partnership with <a href="https://www.googleforentrepreneurs.com/" target="_blank" onclick="ga('send', 'event', 'Homepage: Google for Entreprenuers button click', 'GfE Button in partners section', 1);">Google for Entrepreneurs</a>.</p>
     </div>
     <div class="grid-item width-one-third">
       <img src="{{ site.baseurl }}/images/logo-google-color.png" alt="">
