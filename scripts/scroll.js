@@ -5,7 +5,9 @@ $('.js-smooth-scroll').click(function(e){
     if (target.length) {
         $('html,body').animate({
             scrollTop: target.offset().top
-        }, 1000);
+        }, 1000, function(){
+            window.location.hash = that.hash;
+        });
         return false;
     };
 });
