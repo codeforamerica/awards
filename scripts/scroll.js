@@ -8,4 +8,4 @@ $('.js-smooth-scroll').click(function(e){
         }, 1000);
         return false;
     };
-})''
+});
