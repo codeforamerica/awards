@@ -12,9 +12,11 @@ Jekyll's [requirements](http://jekyllrb.com/docs/installation/#requirements) inc
 - [x] Linux, Unix, or Mac OS X
 - [ ] NodeJS, or another JavaScript runtime (_not required for this project_)
 
+[Sass](http://sass-lang.com/install) is used for stylesheets.
+
 ### To Run
 After [forking and cloning](https://help.github.com/articles/fork-a-repo/) this project, use `jekyll serve` to run Jekyll's built-in development server at **http://localhost:4000**.
 
 ___
 
-<img src="http://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="Made with jQuery" height="70" align="right"> <img src="https://cdn.rawgit.com/jekyll/brand/master/jekyll-logo-light-transparent.png" alt="Jekyll logo" height="70" align="right">
+<img src="https://cdn.rawgit.com/sass/sass-site/master/source/assets/img/logos/logo.svg" alt="Sass logo" height="70" align="right"> <img src="http://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="Made with jQuery" height="70" align="right"> <img src="https://cdn.rawgit.com/jekyll/brand/master/jekyll-logo-light-transparent.png" alt="Jekyll logo" height="70" align="right">
