@@ -14,4 +14,7 @@
       <p>Technology Awards name and logo copyright &copy; 2015 <a href="https://www.codeforamerica.org/">Code for America</a>. Questions? Reach out to us at <a href="mailto:awards@codeforamerica.org">awards@codeforamerica.org</a>.</p>
     </div>
   </div>
+  {% if page.footer_markup %}
+    {{ page.footer_markup }}
+  {% endif %}
 </footer>
