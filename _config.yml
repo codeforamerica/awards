@@ -4,6 +4,9 @@ collections:
   judges:
     output: true
     permalink: /judges/:path/
+  2015-winners:
+    output: true
+    permalink: /2015/winner/:path/
 
 defaults:
   - scope:
@@ -11,4 +14,8 @@ defaults:
     values:
       layout: "default"
       type: "judge"
-      foo: "bar"
+  - scope:
+      type: "2015-winners"
+    values:
+      layout: "default"
+      type: "winner"

@@ -19,26 +19,39 @@ footer_markup: |
   </div>
 ---
 <!-- Section: Intro -->
-<section class="section-slab section-hero">
-  <video autoplay loop poster="{{ site.baseurl }}/images/video-bg-new.jpg" id="bgvid">
-    <!-- <source src="polina.webm" type="video/webm"> -->
-    <source src="{{ site.baseurl }}/images/city_blurry_new.mp4" type="video/mp4">
-  </video>
-
-  {% include header.html reverse="true" %}
+<section class="section-slab">
+  {% include header.html %}
   <div class="grid-box">
     <div class="width-whole">
-      <h1 class="words-serif words-title">Recognizing 21st century government technology</h1>
+      <h1 class="words-serif">Powering 21st century government</h1>
+      <p>
+        The Code for America Technology Awards recognize outstanding products and implementations of government technology. These are the most influential and effective products and services powering 21st century governments.
+      </p>
     </div>
-    <div class="grid-item width-two-thirds">
-        <p>
-          The Code for America Technology Awards recognize outstanding products and implementations of government technology. Winners will be announced on stage at the <a href="https://www.codeforamerica.org/summit/" ga('send', 'event', 'Homepage: Summit button click', 'Summit button in hero', 1);>Code for America Summit</a>, September 30 &ndash; October 2 in Oakland, CA.
-        </p>
-        <p><strong>Applications for the 2015 awards are now closed.</strong></p>
-        <div class="button-group">
-          <a href="{{ site.baseurl }}/signup" class="button" onclick="ga('send', 'event', 'Homepage: Interest signup button click', 'Interest form in hero', 1);">Stay up-to-date with the awards</a>
-        </div>
+  </div>
+</section>
+
+<!-- Section: Winners -->
+<section class="section-slab" id="judges">
+  <div class="grid-box">
+    {% assign winners = (site.2015-winners | sort: 'name') %}
+    {% for winner in winners %}
+    <div class="grid-item width-one-third judge-box {% cycle '','','end-row' %}">
+      <a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Image click: {{ judge.first_name }} {{ judge.last_name }}', 1);">
+        <img class="judge-box-headshot" src="
+        {% if judge.placeholder_picture %}
+        {{ site.baseurl }}/images/judges/placeholder.jpg
+        {% else %}
+        {{ site.baseurl }}/images/judges/{{ judge.first_name | downcase | replace: '.','' | replace: ' ','-' }}-{{ judge.last_name | downcase | replace: '.','' | replace: ' ','-' }}.jpg
+        {% endif %}
+        " alt="{{ judge.name }}">
+      </a>
+      <h4><a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Name click: {{ judge.first_name }} {{ judge.last_name }}', 1);">{{ judge.first_name }} {{ judge.last_name }}</a></h4>
+      <p>{{ judge.title }}, {{ judge.organization }}</p>
+      <p>{{ judge.short_bio }}</p>
+      <p><a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Read more click: {{ judge.first_name }} {{ judge.last_name }}', 1);">Read more</a></p>
     </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -46,7 +59,7 @@ footer_markup: |
 <section class="section-slab" id="about">
   <div class="grid-box">
     <div class="grid-item width-whole">
-      <h1>How it works</h1>
+      <h2>How it works</h2>
     </div>
 
     <div class="[ grid-item width-one-third ] [ step step-1 ]">
@@ -90,7 +103,7 @@ footer_markup: |
     <div class="grid-item width-whole">
       <img class="image-fill" src="{{ site.baseurl }}/images/summit-2014.jpg" alt="">
       <p class="note">The 2014 Summit connected hundreds of technology leaders with important civic technology projects.</p>
-      <h1>Why you should apply</h1>
+      <h2>Why you should apply</h2>
   		<p>Code for America unites leaders from hundreds of governments across the U.S. as well as civic-minded technologists, designers, community organizers, and entrepreneurs.</p>
     </div>
     <div class="grid-item width-one-half">
@@ -117,7 +130,7 @@ footer_markup: |
 <section class="[ section-slab section-slab-color ] section-apply words-center">
 	<div class="grid-box">
 		<div class="grid-item width-one-whole grid-item-isolate words-center">
-			<h1>Applications are now closed</h1>
+			<h2>Applications are now closed</h2>
       <a href="{{ site.baseurl }}/signup" target="_blank" class="button" onclick="ga('send', 'event', 'Homepage: Interest signup button click', 'Interest signup in middle of page');">Stay up-to-date with the awards</a>
 		</div>
 	</div>
@@ -140,7 +153,7 @@ footer_markup: |
 <section class="section-slab" id="selection">
   <div class="grid-box">
     <div class="grid-item width-whole">
-      <h1>Selection criteria</h1>
+      <h2>Selection criteria</h2>
       <p>The Technology Awards will go to companies, government entities, civic technologists, and others that are building or implementing software for the public sector in the United States. The software does not need to have been created in 2015. To be eligible for an award, the software must be:</p>
       <article>
         <ol>
@@ -165,7 +178,7 @@ footer_markup: |
 <section class="section-slab" id="judges">
   <div class="grid-box">
     <div class="grid-item width-whole">
-      <h1>Meet the judges</h1>
+      <h2>Meet the judges</h2>
     </div>
     {% assign judges = (site.judges | sort: 'last_name') %}
     {% for judge in judges %}
@@ -192,7 +205,7 @@ footer_markup: |
 <section class="section-slab" id="partners">
   <div class="grid-box">
     <div class="grid-item width-whole">
-      <h1>Partners</h1>
+      <h2>Partners</h2>
     </div>
     <div class="grid-item grid-item-isolate width-whole">
       <p>The Technology Awards are presented in partnership with <a href="https://www.googleforentrepreneurs.com/" target="_blank" onclick="ga('send', 'event', 'Homepage: Google for Entreprenuers button click', 'GfE Button in partners section', 1);">Google for Entrepreneurs</a>.</p>
