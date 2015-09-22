@@ -18,15 +18,14 @@ footer_markup: |
     </div>
   </div>
 ---
+{% include header.html %}
+
 <!-- Section: Intro -->
 <section class="section-slab">
-  {% include header.html %}
   <div class="grid-box">
-    <div class="width-whole">
-      <h1 class="words-serif">Powering 21st century government</h1>
-      <p>
-        The Code for America Technology Awards recognize outstanding products and implementations of government technology. These are the most influential and effective products and services powering 21st century governments.
-      </p>
+    <div class="width-whole words-center">
+      <h1 class="words-serif">The 2015 Awards Winners</h1>
+      <p>The Code for America Technology Awards recognize outstanding products and implementations of government technology. These are the most influential and effective products and services powering 21st century governments.</p>
     </div>
   </div>
 </section>
@@ -36,21 +35,21 @@ footer_markup: |
   <div class="grid-box">
     {% assign winners = (site.2015-winners | sort: 'name') %}
     {% for winner in winners %}
-    <div class="grid-item width-one-third judge-box {% cycle '','','end-row' %}">
-      <a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Image click: {{ judge.first_name }} {{ judge.last_name }}', 1);">
-        <img class="judge-box-headshot" src="
-        {% if judge.placeholder_picture %}
-        {{ site.baseurl }}/images/judges/placeholder.jpg
-        {% else %}
-        {{ site.baseurl }}/images/judges/{{ judge.first_name | downcase | replace: '.','' | replace: ' ','-' }}-{{ judge.last_name | downcase | replace: '.','' | replace: ' ','-' }}.jpg
+    <a class="grid-item width-one-half box box-winner words-center {% cycle '','end-row' %}" href="{{ site.baseurl }}{{ winner.url }}" onclick="ga('send', 'event', 'Homepage: Winner click', 'Box click: {{ winner.name }}', 1);">
+      <div class="box-header">
+        <img src="{{ site.baseurl }}/images/icons/winner-white.png" alt="">
+        {% if winner.special_categories %}
+        <p>{% for c in winner.special_categories %}{{ c }}{% endfor %}</p>
         {% endif %}
-        " alt="{{ judge.name }}">
-      </a>
-      <h4><a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Name click: {{ judge.first_name }} {{ judge.last_name }}', 1);">{{ judge.first_name }} {{ judge.last_name }}</a></h4>
-      <p>{{ judge.title }}, {{ judge.organization }}</p>
-      <p>{{ judge.short_bio }}</p>
-      <p><a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Read more click: {{ judge.first_name }} {{ judge.last_name }}', 1);">Read more</a></p>
-    </div>
+      </div>
+      <div class="box-logo" style="background-image:url('{{ site.baseurl }}{{ winner.logo_link }}')"></div>
+      <div class="box-logo-hover" style="background-image:url('{{ site.baseurl }}{{ winner.logo_link_reverse }}')"></div>
+      <div class="box-copy">
+        <h3>{{ winner.name }}</h3>
+        <p>{{ winner.short_marketing_blurb }}</p>
+        <p class="words-underline">Read more</p>
+      </div>
+    </a>
     {% endfor %}
   </div>
 </section>
@@ -182,19 +181,12 @@ footer_markup: |
     </div>
     {% assign judges = (site.judges | sort: 'last_name') %}
     {% for judge in judges %}
-    <div class="grid-item width-one-third judge-box {% cycle '','','end-row' %}">
+    <div class="grid-item width-one-fourth judge-box {% cycle '','','','end-row' %}">
       <a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Image click: {{ judge.first_name }} {{ judge.last_name }}', 1);">
-        <img class="judge-box-headshot" src="
-        {% if judge.placeholder_picture %}
-        {{ site.baseurl }}/images/judges/placeholder.jpg
-        {% else %}
-        {{ site.baseurl }}/images/judges/{{ judge.first_name | downcase | replace: '.','' | replace: ' ','-' }}-{{ judge.last_name | downcase | replace: '.','' | replace: ' ','-' }}.jpg
-        {% endif %}
-        " alt="{{ judge.name }}">
+        <img class="judge-box-headshot" src="{{ site.baseurl }}/images/judges/{{ judge.first_name | downcase | replace: '.','' | replace: ' ','-' }}-{{ judge.last_name | downcase | replace: '.','' | replace: ' ','-' }}.jpg" alt="{{ judge.name }}">
       </a>
       <h4><a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Name click: {{ judge.first_name }} {{ judge.last_name }}', 1);">{{ judge.first_name }} {{ judge.last_name }}</a></h4>
       <p>{{ judge.title }}, {{ judge.organization }}</p>
-      <p>{{ judge.short_bio }}</p>
       <p><a href="{{ site.baseurl }}{{ judge.url }}" onclick="ga('send', 'event', 'Homepage: Judge click', 'Read more click: {{ judge.first_name }} {{ judge.last_name }}', 1);">Read more</a></p>
     </div>
     {% endfor %}

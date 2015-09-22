@@ -13,8 +13,8 @@
 .header-logo {
   display: inline-block;
   img {
-    width: 200px;
-    @include media($tablet-up) { width: 300px; }
+    width: 150px;
+    @include media($tablet-up) { width: 200px; }
     height: auto;
   }
   .logo-large { display: none; }
