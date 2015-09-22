@@ -65,6 +65,12 @@ h6, .h6 {
 }
 
 // center typography
-.words-center {
+.words-center,
+.words-center * {
 	text-align: center;
+}
+
+// underline typography
+.words-underline {
+	text-decoration: underline;
 }

@@ -1,0 +1,21 @@
+.page-winner {
+  h1 { margin-top: 0; }
+  .box-copy {
+    @include media($mobile-up) {
+      padding: 2em;
+    }
+  }
+  .winner-logo {
+    width: 8em;
+    display: block;
+    margin: 1em auto;
+    @include media($mobile-up) {
+      width: auto;
+      margin: 0;
+      padding-right: 1em;
+    }
+  }
+  img.winner-in-use {
+    margin-top: 1em;
+  }
+}

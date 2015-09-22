@@ -1,0 +1,38 @@
+{% include header.html %}
+
+<section class="section-slab">
+  <div class="grid-box">
+    <div class="grid-item width-one-whole">
+      <nav class="nav-breadcrumbs">
+        <span class="nav-breadcrumbs-item"><a href="/">2015 Technology Awards Winners</a></span>
+        <span class="nav-breadcrumbs-item">{{ page.name }}</span>
+      </nav>
+    </div>
+
+    <div class="grid-item width-one-whole box box-winner">
+      <div class="box-header words-center">
+        <img src="{{ site.baseurl }}/images/icons/winner-white.png" alt="">
+        {% if page.special_categories %}
+        <p>{% for c in page.special_categories %}{{ c }}{% endfor %}</p>
+        {% endif %}
+      </div>
+      <div class="box-copy grid-box">
+        <div class="grid-item width-one-third">
+          <img class="winner-logo" src="{{ site.baseurl }}{{ page.logo_link }}" alt="">
+        </div>
+        <div class="grid-item width-two-thirds end-row">
+          <h1>{{ page.name }}</h1>
+          <p>by {{ page.org_name }} (<a href="{{ page.product_link }}" target="_blank">{{ page.product_link }}</a>)</p>
+          <p>{{ page.long_marketing_blurb }}</p>
+        </div>
+        <div class="grid-item width-one-third">
+          <img class="winner-in-use" src="{{ site.baseurl }}{{ page.product_in_use_link }}" alt="">
+        </div>
+        <div class="grid-item width-two-thirds">
+          <h3>Why they won</h3>
+          <p>{{ page.winning_description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
