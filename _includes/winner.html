@@ -22,7 +22,7 @@
         </div>
         <div class="grid-item width-two-thirds end-row">
           <h1>{{ page.name }}</h1>
-          <p>by {{ page.org_name }} (<a href="{{ page.product_link }}" target="_blank">{{ page.product_link }}</a>)</p>
+          <p>{% if page.org_name %}by {{ page.org_name }} {% endif %}(<a href="{{ page.product_link }}" target="_blank">{{ page.product_link }}</a>)</p>
           <p>{{ page.long_marketing_blurb }}</p>
         </div>
         <div class="grid-item width-one-third">
